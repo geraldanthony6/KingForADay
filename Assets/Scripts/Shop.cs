@@ -21,7 +21,7 @@ public class Shop : MonoBehaviour
     {
         _timer -= Time.deltaTime;
         if(_timer <= 0){
-            PlayerStatsManager.Instance.GoldUpdate((int)_goldProduced);
+            PlayerStatsManager.Instance.GoldUpdate((int)_goldProduced * (int)KingManager.Instance.GetCurKing().GetKingStats().wealth);
             _timer = _timerCooldown;
         }
     }
