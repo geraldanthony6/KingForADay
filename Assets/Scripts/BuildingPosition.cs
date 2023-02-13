@@ -48,6 +48,8 @@ public class BuildingPosition : MonoBehaviour
             _builtOn = true;
             PlayerStatsManager.Instance.GoldUpdate(-20);
             PlayerStatsManager.Instance.BuildingAmountUpdate();
+            // Collider2D tmpCollider = GetComponent<BoxCollider2D>();
+            // tmpCollider.enabled = false;
 
         } else if(BuildingManager.Instance.GetBuildingState() == BuildingManager.State.SELECTING && _builtOn){
 
